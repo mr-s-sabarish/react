@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ContactSection = () => {
+export default function Contact () {
   const [toastVisible, setToastVisible] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -21,7 +21,7 @@ const ContactSection = () => {
       form.reset();
       setToastVisible(true);
       setTimeout(() => setToastVisible(false), 3000);
-    // eslint-disable-next-line no-unused-vars
+      // eslint-disable-next-line no-unused-vars
     } catch (err) {
       alert("There was an error, please try again.");
     }
@@ -30,13 +30,13 @@ const ContactSection = () => {
   return (
     <section id="contact" className="min-h-screen bg-black scroll-mt-16 p-2 md:p-8 text-white">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16 fade-element" data-animation-type="fade-up">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">Get in <span className="text-green-400">Touch</span></h2>
           <p className="text-gray-400">I’d love to hear about your project or opportunity. Let’s make something awesome together.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-8 p-8 fade-element" data-animation-type="fade-left">
+          <div className="space-y-8 p-8">
             <div>
               <h3 className="text-xl text-green-400 font-semibold mb-2">Email</h3>
               <p className="text-gray-300"><a href="mailto:sabarisiva775@gmail.com">sabarisiva775@gmail.com</a></p>
@@ -55,7 +55,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <form action="https://formspree.io/f/xgvaljgk" method="POST" className="fade-element bg-zinc-900 border border-zinc-700 p-8 rounded-2xl shadow-xl space-y-6" onSubmit={handleSubmit} data-animation-type="fade-right">
+          <form action="https://formspree.io/f/xgvaljgk" method="POST" className="bg-zinc-900 border border-zinc-700 p-8 rounded-2xl shadow-xl space-y-6" onSubmit={handleSubmit}>
             <div className="text-center text-2xl font-bold">
               <h1 className="text-green-400">Let’s <span className="text-white">Connect</span></h1>
             </div>
@@ -97,4 +97,3 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;

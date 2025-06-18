@@ -1,7 +1,9 @@
-import ContactSection from "./components/contact"
-import Footer from "./components/footer"
-import Hero from "./components/hero"
-import Navbar from "./components/nav"
+import Footer from "./components/Footer"
+import Contact from "./components/Contact"
+import Services from "./components/services"
+import About from "./components/About"
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
 
 
 function App() {
@@ -9,11 +11,11 @@ function App() {
   return <>
     <Navbar/>
     <Hero/>
-    <ContactSection/>
+    <About/>
+    <Services/>
+    <Contact/>
     <Footer/>
   </>
-
-  // return <Saba></Saba>
   
 }
 

@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: "Cormorant", serif;
 }
+
+.skill-bar {
+    width: 0;
+    transition: width 2s ease;
+}
+
+
